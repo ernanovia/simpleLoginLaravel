@@ -1,3 +1,15 @@
+<h4 align="center">If you encounter an error while running the migrate command the password_reset table don't exist(because your mysql older version) </h4>
+<h5 align="center"> You can add this code in App/Providers/AppServiceProvider <br/>
+ //import 
+  use Illuminate\Support\Facades\Schema;
+  
+  public function boot()
+    {
+        //
+        Schema::defaultStringLength(191);
+    }
+ </h5>
+ <h5>then empty your database and run the command </h5>
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
